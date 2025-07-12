@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Reminder & Planner</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Class Reminder & Planner ⏰</h1>
+
+    <label for="task">Task Name:</label>
+    <input type="text" id="task" placeholder="Enter your task name">
+
+    <label for="date">Due Date:</label>
+    <input type="date" id="date">
+
+    <label for="mobile">Mobile Number (+CountryCode):</label>
+    <input type="tel" id="mobile" placeholder="‪+919876543210‬"
+           pattern="^\+\d{10,15}$"
+           title="Enter a valid phone number with country code" required>
+
+    <button onclick="addTask()">Add Task</button>
+    <button class="clear-btn" onclick="clearAllTasks()">Clear All Tasks</button>
+
+    <h2>📝 Your Tasks (<span id="taskCount">0</span>)</h2>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
